@@ -1,0 +1,99 @@
+* {
+    background-color: gainsboro; /*make all backgrounds gray*/
+}
+
+video, audio {
+    margin: 40px 40px 20px 20px;
+    display: block;
+}
+
+
+#recordings :hover {
+    border-style: dashed;     /*dark red border when hovering in recordings section*/
+    border-color: darkred;
+    border-width: 2px;
+    border-radius: 4px;
+}
+
+b {
+    color: forestgreen;   /*green color for b text*/
+    text-decoration: wavy;
+    text-align: justify;
+}
+
+nav :active {               /*links are funny when u click them*/
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 300%;        /*make h1 bigger */
+}
+
+h2 {
+    font-size: 150%;        /*make h2 smaller*/
+}
+
+
+#feedback > form{
+    display: grid;          /*3x3 grid setup*/
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 150px 150px 150px;
+}
+
+
+#feedback fieldset{
+    padding: 10px;          
+    width: 100px;
+    display: flex;                 /*vertical flexbox*/
+    flex-direction: column;        
+    align-items: center;
+    justify-content: space-evenly; /*elements fill the box*/
+    gap: 2%;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+
+#age {
+    width: 40px;
+    grid-column: 2 / 3;
+}
+
+#questions {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+} 
+
+form > button {
+    grid-column: 2/3;
+    height: 24%;
+    width: 38%;
+}
+
+.extragreen {
+    background-color: lightgreen;
+    color: green;
+}
+
+/* background is cyan unless aspect ratio is above 3/2 */
+@media (max-aspect-ratio: 3/2) {
+    #gbm,  input ~ label, p + textarea{
+      background: #9ff; /* cyan */
+    }
+}
+
+/*bold all links whose source begins with wikipedia*/
+[href^="https://en.wikipedia.org"] {
+    font-weight: bold;
+}
+
+/*remove bullets from all ul elements and display them on one line*/
+ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+.invisible {
+    display: none;
+}

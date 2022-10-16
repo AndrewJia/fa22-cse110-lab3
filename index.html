@@ -5,19 +5,28 @@
     <meta charset="UTF-8">
     <meta name="author" content="Jonathan">
     <link rel="icon" type="image/x-icon" href="/media/100.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      video {
+        padding: 4%;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Meeting Minutes</h1>
     </header>
     <main>
-      <section>
+      <section id="recordings">
         <h2>Meeting Recording/Audio</h2>
-        <video width="320" controls>
+        <video width="60%" controls>
           <source src="/media/MeetingVideo.mp4" type="video/mp4">
         </video>
         <br>
-        <audio controls>
+        <audio controls style="width:95%">
           <source src="/media/MeetingAudio.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>
@@ -42,7 +51,7 @@
       </section>
       <hr>
       <section>
-        <h2>Important Matters</h2>
+        <h2 class="extragreen">Important Matters</h2>
         <details>
           <summary><b>Biannual Lettuce Eating Contest</b></summary>
           <p>Lettuce Club shall host a biannual GBM in the form of a Lettuce eating competition the tenth week of the chosen quarter in which competitors and spectators shall gather. Each competitor shall bring a head of Iceberg Lettuce. </p>
@@ -57,8 +66,8 @@
         </details>
       </section>
       <hr>
-      <section>
-        <h2>Feedback Form</h2>
+      <section id="feedback">
+        <h2 class="extragreen">Feedback Form</h2>
         <form>
           <fieldset>
             <label for="fname">First name:</label><br>
@@ -72,28 +81,34 @@
               <option value="second">
               <option value="ERC">
               <option value="sixth">
+              <option value="eigth" class="invisible">
             </datalist>
           </fieldset>
           
-
-          <p>Input your age</p>
-          <select name="age" id="age">
-            <option value="1-10">1-10</option>
-            <option value="11-71">11-71</option>
-            <option value="72+">72+</option>
-          </select>
-
-          <p>Can you attend our GBM?</p>
-          <input type="radio" id="yesattend" name="fav_language" value="Yes">
-          <label for="yesattend">Yes</label><br>
-          <input type="radio" id="noattend" name="fav_language" value="No">
-          <label for="noattend">No</label><br>
-          <input type="radio" id="maybeattend" name="fav_language" value="Maybe">
-          <label for="maybeattend">Maybe</label>
-
-          <p>Questions about the club?</p>
-          <textarea id="questions" name="textbox" rows="4" cols="50">What do you think?</textarea><br>
-
+          <div id="age">
+            <p>Input your age</p>
+            <select name="age" id="age">
+              <option value="1-10">1-10</option>
+              <option value="11-71">11-71</option>
+              <option value="72+">72+</option>
+            </select>
+          </div>
+          
+          <div id="gbm">
+            <p>Can you attend our GBM?</p>
+            <input type="radio" id="yesattend" name="fav_language" value="Yes">
+            <label for="yesattend">Yes</label><br>
+            <input type="radio" id="noattend" name="fav_language" value="No">
+            <label for="noattend">No</label><br>
+            <input type="radio" id="maybeattend" name="fav_language" value="Maybe">
+            <label for="maybeattend">Maybe</label>
+          </div>
+          
+          <div id="questions">
+            <p>Questions about the club?</p>
+            <textarea id="questions" name="textbox" rows="4" cols="50">What do you think?</textarea><br>  
+          </div>
+          
           <button>Submit</button>
         </form>
       </section>
